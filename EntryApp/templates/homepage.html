@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Entry App</title>
+  </head>
+
+  <body>
+    <h1 style="text-align: center">Hello User !</h1>
+    <h3 style="text-align: center">Enter Your Details and click Submit.</h3>
+    <form action="save" method="POST" style="text-align: center">
+      {% csrf_token %}
+      <label for="name">Enter Name:</label> <br />
+      <input type="text" name="name" id="name" /> <br />
+      <br />
+      <label for="age">Enter Age:</label> <br />
+      <input type="number" name="age" id="age" /> <br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    }
+  </script>
+</html>
